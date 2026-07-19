@@ -1,5 +1,5 @@
 // Orchestrator — runs one full pass of the agent swarm and emits a timeline of
-// AgentEvents that the dashboard streams. This is the "conductor" that turns six
+// AgentEvents that clients can stream. This is the "conductor" that turns six
 // independent agents into a single autonomous investment cycle:
 //
 //   Scout → Analyst → Architect → Sentinel → Executor → Steward

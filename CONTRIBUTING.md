@@ -14,7 +14,6 @@ Thanks for your interest in improving Sturna! This document covers everything yo
 git clone https://github.com/tylerbroqs/sturna.git
 cd sturna
 npm install                 # engine + API deps
-cd web && npm install       # dashboard deps
 ```
 
 Useful commands:
@@ -24,8 +23,6 @@ Useful commands:
 | `npm run cycle` | Run one full swarm cycle in the terminal — the fastest smoke test |
 | `npm run server` | Start the Hono API with hot reload on :8787 |
 | `npm run typecheck` | Typecheck the engine + server |
-| `cd web && npm run dev` | Dashboard dev server on :5173 |
-| `cd web && npm run build` | Typecheck + production-build the dashboard |
 
 ## Making changes
 
@@ -34,9 +31,8 @@ Useful commands:
 3. Verify before pushing:
    ```bash
    npm run typecheck && npm run cycle
-   cd web && npm run build
    ```
-4. Open a pull request. Describe **what** changed and **why**; screenshots or terminal output are appreciated for dashboard/engine behavior changes.
+4. Open a pull request. Describe **what** changed and **why**; terminal output is appreciated for engine behavior changes.
 
 ## What makes a good contribution
 
@@ -44,7 +40,6 @@ Useful commands:
 - **Factor research** — new scoring signals in the Analyst.
 - **Execution venues** — additional adapters alongside `RobinhoodAdapter` (keep the `paper` / live split).
 - **Universe realism** — richer simulated dynamics (jumps, liquidity shocks, valuation gaps).
-- **Dashboard** — visual polish, new panels, accessibility.
 - **Docs** — clarifications, tutorials, architecture notes.
 
 For anything large or architectural (a new agent, changing the handoff pipeline, a new venue protocol), please open an issue first so we can discuss the design before you invest time.

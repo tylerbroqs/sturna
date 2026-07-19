@@ -1,19 +1,16 @@
 // Sturna API server (Hono).
-// Serves the live engine state to the dashboard and exposes control endpoints.
-// Also serves the built web app in production.
+// Serves the live engine state and exposes control endpoints for API clients.
 
 import { serve } from "@hono/node-server";
-import { serveStatic } from "@hono/node-server/serve-static";
 import { Hono } from "hono";
 import { cors } from "hono/cors";
-import { existsSync } from "node:fs";
 import { Engine, AGENTS } from "../core/engine";
 import { MANDATES } from "../core/agents/analyst";
 import { ROBINHOOD_TRADING_MCP, ROBINHOOD_BANKING_MCP } from "../core/mcp/robinhoodAdapter";
 
 const engine = new Engine(1_000_000);
 
-// Bootstrap: run a couple of cycles so the dashboard opens with a live book.
+// Bootstrap: run a couple of cycles so the API opens with a live book.
 await engine.runOnce();
 await engine.runOnce();
 
@@ -76,13 +73,6 @@ app.post("/api/mandate", async (c) => {
   const result = await engine.runOnce();
   return c.json({ ok: true, mandate: engine.mandateKey, cycleId: result.cycleId });
 });
-
-// Serve the built web app if present (production).
-const webDist = "./web/dist";
-if (existsSync(webDist)) {
-  app.use("/*", serveStatic({ root: webDist }));
-  app.get("/*", serveStatic({ path: "./web/dist/index.html" }));
-}
 
 const port = Number(process.env.PORT ?? 8787);
 serve({ fetch: app.fetch, port }, (info) => {

@@ -1,5 +1,5 @@
 name: Bug report
-description: Something in the swarm, API, or dashboard is broken
+description: Something in the swarm engine or API is broken
 labels: ["bug"]
 body:
   - type: textarea
@@ -17,7 +17,6 @@ body:
       options:
         - Agent engine (src/core)
         - API server (src/server)
-        - Dashboard (web)
         - Docs / other
     validations:
       required: true
@@ -35,7 +34,7 @@ body:
     id: environment
     attributes:
       label: Environment
-      placeholder: OS, Node version, browser (for dashboard issues)
+      placeholder: OS, Node version
   - type: textarea
     id: logs
     attributes:

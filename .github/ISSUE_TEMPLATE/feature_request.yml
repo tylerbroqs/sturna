@@ -1,5 +1,5 @@
 name: Feature request
-description: Propose a new agent capability, risk model, venue, or dashboard improvement
+description: Propose a new agent capability, risk model, or execution venue
 labels: ["enhancement"]
 body:
   - type: textarea
@@ -26,7 +26,6 @@ body:
         - Factor research (Analyst)
         - Execution venues / MCP
         - Universe simulation
-        - Dashboard (web)
         - Docs / other
     validations:
       required: true
