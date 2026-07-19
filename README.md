@@ -56,6 +56,7 @@ src/core/          the agent engine (framework-free TypeScript)
   engine.ts        long-lived state: basket, NAV curve, activity feed, metrics
 src/server/        Hono API that runs the engine live and exposes control endpoints
 src/cli.ts         terminal entry point — runs one full swarm cycle
+test/              Vitest unit suite (agents, engine, orchestrator)
 ```
 
 The core engine has **zero framework dependencies** — it runs identically in Node and in the browser, so you can embed the swarm directly or drive it over the API.
@@ -70,6 +71,9 @@ npm run server            # http://localhost:8787
 
 # — or — a one-shot terminal smoke test of the full swarm (no server needed)
 npm run cycle
+
+# run the unit suite
+npm test
 ```
 
 Point any client at the API (see [API](#api)) — the engine is transport-agnostic.

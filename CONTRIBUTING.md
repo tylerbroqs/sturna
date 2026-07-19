@@ -20,6 +20,8 @@ Useful commands:
 
 | Command | What it does |
 |---------|--------------|
+| `npm test` | Run the Vitest unit suite (agents, engine, orchestrator) |
+| `npm run test:watch` | Run the tests in watch mode while developing |
 | `npm run cycle` | Run one full swarm cycle in the terminal — the fastest smoke test |
 | `npm run server` | Start the Hono API with hot reload on :8787 |
 | `npm run typecheck` | Typecheck the engine + server |
@@ -30,8 +32,9 @@ Useful commands:
 2. Make your change. Match the existing code style — small modules, explicit types, no new runtime dependencies in `src/core/` without discussion.
 3. Verify before pushing:
    ```bash
-   npm run typecheck && npm run cycle
+   npm run typecheck && npm test && npm run cycle
    ```
+   Add or update tests under `test/` for any behavior you change.
 4. Open a pull request. Describe **what** changed and **why**; terminal output is appreciated for engine behavior changes.
 
 ## What makes a good contribution

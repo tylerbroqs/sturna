@@ -3,8 +3,8 @@
 // conviction-weighted composite, and writes a human-readable rationale.
 //
 // The scoring is a real, deterministic multi-factor model. An optional LLM
-// narration layer (see reasoning.ts) can enrich `rationale` when an API key is
-// present, but the numbers — and therefore the portfolio — never depend on it.
+// narration layer could enrich `rationale`, but the numbers — and therefore
+// the portfolio — never depend on it.
 
 import type { Asset, AssetScore } from "../types";
 import { priceReturn } from "../universe";

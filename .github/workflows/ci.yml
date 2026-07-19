@@ -7,7 +7,7 @@ on:
 
 jobs:
   engine:
-    name: Engine — typecheck & smoke cycle
+    name: Engine — typecheck, tests & smoke cycle
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -17,5 +17,7 @@ jobs:
           cache: npm
       - run: npm ci
       - run: npm run typecheck
+      - name: Unit tests (Vitest)
+        run: npm test
       - name: Run one full swarm cycle (paper mode)
         run: npm run cycle

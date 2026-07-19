@@ -4,11 +4,12 @@
 
 ## How was it verified?
 
-<!-- e.g. `npm run typecheck && npm run cycle` output -->
+<!-- e.g. `npm run typecheck && npm test && npm run cycle` output -->
 
 ## Checklist
 
 - [ ] `npm run typecheck` passes
+- [ ] `npm test` passes (added/updated tests for changed behavior)
 - [ ] `npm run cycle` runs a clean swarm cycle
 - [ ] Paper mode remains the default; no credentials required to run
 - [ ] No new runtime dependencies in `src/core/` (or discussed in an issue first)
