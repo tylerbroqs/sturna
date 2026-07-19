@@ -90,11 +90,15 @@ integration point — the rest of the swarm is unchanged.
 
 | Endpoint | Description |
 |----------|-------------|
+| `GET /api/health` | Liveness probe |
 | `GET /api/overview` | Metrics, mandate, agents, risk, adapter status |
 | `GET /api/basket` | Live basket & positions |
 | `GET /api/nav` | NAV curve vs. benchmark |
 | `GET /api/activity` | Agent reasoning stream |
 | `GET /api/universe` | Tokenized asset universe |
+| `GET /api/cycles` | Recent cycle summaries |
+| `GET /api/cycles/:id` | Full detail for one cycle |
+| `GET /api/scores` | Latest Analyst factor scores |
 | `POST /api/run-cycle` | Run one full swarm cycle |
 | `POST /api/mandate` | Switch mandate & re-run |
 

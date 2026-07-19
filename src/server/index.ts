@@ -5,6 +5,14 @@ import { serve } from "@hono/node-server";
 import { Hono } from "hono";
 import { cors } from "hono/cors";
 import { Engine, AGENTS } from "../core/engine";
+
+// Load a local .env if present (e.g. RH_MCP_TOKEN, PORT) using Node's built-in
+// loader — no dependency. Missing file is fine; paper mode needs no config.
+try {
+  (process as NodeJS.Process & { loadEnvFile?: (path?: string) => void }).loadEnvFile?.(".env");
+} catch {
+  /* no .env file — running on process environment only */
+}
 import { MANDATES } from "../core/agents/analyst";
 import { ROBINHOOD_TRADING_MCP, ROBINHOOD_BANKING_MCP } from "../core/mcp/robinhoodAdapter";
 
