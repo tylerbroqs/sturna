@@ -1,0 +1,42 @@
+{
+  "name": "sturna",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Sturna — the autonomous private-markets desk. An AI agent swarm that curates tokenized private/RWA baskets on Robinhood Chain.",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tylerbroqs/sturna.git"
+  },
+  "bugs": {
+    "url": "https://github.com/tylerbroqs/sturna/issues"
+  },
+  "homepage": "https://github.com/tylerbroqs/sturna#readme",
+  "keywords": [
+    "ai-agents",
+    "multi-agent",
+    "portfolio",
+    "rwa",
+    "tokenized-assets",
+    "robinhood",
+    "mcp",
+    "trading",
+    "typescript"
+  ],
+  "scripts": {
+    "server": "tsx watch src/server/index.ts",
+    "start": "tsx src/server/index.ts",
+    "cycle": "tsx src/cli.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "hono": "^4.6.14",
+    "@hono/node-server": "^1.13.7"
+  },
+  "devDependencies": {
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2",
+    "@types/node": "^22.10.2"
+  }
+}

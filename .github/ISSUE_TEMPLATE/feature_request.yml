@@ -1,0 +1,36 @@
+name: ✨ Feature request
+description: Propose a new agent capability, risk model, venue, or dashboard improvement
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem would this solve?
+      placeholder: The Sentinel only checks 1-day VaR; long-tail drawdowns slip through…
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed solution
+      description: How would it work? Which agent/module does it touch?
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - New/changed agent behavior
+        - Risk models (Sentinel)
+        - Factor research (Analyst)
+        - Execution venues / MCP
+        - Universe simulation
+        - Dashboard (web)
+        - Docs / other
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered

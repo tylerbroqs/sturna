@@ -1,0 +1,14 @@
+{
+  "name": "STURNA — Autonomous Private-Markets Desk",
+  "short_name": "STURNA",
+  "description": "A swarm of six AI agents curating tokenized private & real-world asset baskets on Robinhood Chain.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#070907",
+  "theme_color": "#070907",
+  "icons": [
+    { "src": "/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}
