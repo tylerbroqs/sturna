@@ -1,4 +1,4 @@
-name: 🐛 Bug report
+name: Bug report
 description: Something in the swarm, API, or dashboard is broken
 labels: ["bug"]
 body:

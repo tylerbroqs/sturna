@@ -18,7 +18,7 @@
 
 Sturna is a fully-functioning reference implementation of a multi-agent investment desk: the agents make real decisions, the portfolio is constructed and rebalanced with real constraints and risk math, and the desk streams its reasoning to a production-grade dashboard. It runs in **paper mode** out of the box (deterministic simulated fills, no capital at risk) and is **MCP-ready** — flip to live by wiring credentials to Robinhood's official [agentic trading MCP](https://robinhood.com/us/en/agentic-trading/).
 
-> ⚠️ **Disclaimer** — Marks, valuations and on-chain metrics are simulated for a paper book. This project is for research and education. Nothing here is investment advice.
+> **Disclaimer** — Marks, valuations and on-chain metrics are simulated for a paper book. This project is for research and education. Nothing here is investment advice.
 
 ## The swarm
 
@@ -26,12 +26,12 @@ The agents run as a handoff pipeline — each owns exactly one decision:
 
 | Agent | Role | What it does |
 |-------|------|--------------|
-| 🔭 **Scout** | Sourcing | Ingests the on-chain universe; enforces custody, liquidity & token-maturity gates. |
-| 🧠 **Analyst** | Research | Scores every asset on a five-factor model (growth / quality / momentum / liquidity / thesis-fit). |
-| 📐 **Architect** | Construction | Conviction-weighting with a volatility penalty; per-name & sector caps; RWA ballast floor. |
-| 🛡️ **Sentinel** | Risk | Independent circuit-breaker — concentration, HHI, weighted vol, 1-day 95% VaR. Can halt a cycle. |
-| ⚡ **Executor** | Execution | Diffs target vs. book, routes minimal-turnover orders via Robinhood MCP / Chain DEX. |
-| 👁️ **Steward** | Monitoring | Marks the book to market between cycles and flags drift beyond tolerance. |
+| **Scout** | Sourcing | Ingests the on-chain universe; enforces custody, liquidity & token-maturity gates. |
+| **Analyst** | Research | Scores every asset on a five-factor model (growth / quality / momentum / liquidity / thesis-fit). |
+| **Architect** | Construction | Conviction-weighting with a volatility penalty; per-name & sector caps; RWA ballast floor. |
+| **Sentinel** | Risk | Independent circuit-breaker — concentration, HHI, weighted vol, 1-day 95% VaR. Can halt a cycle. |
+| **Executor** | Execution | Diffs target vs. book, routes minimal-turnover orders via Robinhood MCP / Chain DEX. |
+| **Steward** | Monitoring | Marks the book to market between cycles and flags drift beyond tolerance. |
 
 ```mermaid
 flowchart LR

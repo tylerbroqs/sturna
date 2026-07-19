@@ -1,4 +1,4 @@
-name: ✨ Feature request
+name: Feature request
 description: Propose a new agent capability, risk model, venue, or dashboard improvement
 labels: ["enhancement"]
 body:

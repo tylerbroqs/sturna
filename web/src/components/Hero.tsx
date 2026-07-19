@@ -48,7 +48,7 @@ function Terminal() {
           transition={{ delay: 0.35 + BOOT.length * 0.28 + 0.2 }}
           className="pt-1 text-mint-400"
         >
-          ✔ desk live<span className="cursor" />
+          &gt; desk live<span className="cursor" />
         </motion.div>
       </div>
     </div>

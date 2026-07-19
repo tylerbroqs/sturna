@@ -86,7 +86,7 @@ if (existsSync(webDist)) {
 
 const port = Number(process.env.PORT ?? 8787);
 serve({ fetch: app.fetch, port }, (info) => {
-  console.log(`\n  🐦  Sturna API live on http://localhost:${info.port}`);
+  console.log(`\n  Sturna API live on http://localhost:${info.port}`);
   console.log(`      mode=${engine.mode}  mandate=${engine.mandateKey}  NAV=$${engine.metrics().nav.toLocaleString()}`);
   console.log(`      Robinhood Trading MCP target: ${ROBINHOOD_TRADING_MCP}\n`);
 });
