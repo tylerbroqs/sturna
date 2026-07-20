@@ -3,7 +3,7 @@
 // hard eligibility gates (custody, liquidity floor, token maturity) before any
 // capital is considered. Produces the investable shortlist for the swarm.
 
-import type { Asset } from "../types";
+import type { Asset } from "../types.js";
 
 export interface ScoutConfig {
   minLiquidity: number; // floor on on-chain depth

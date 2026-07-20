@@ -5,8 +5,8 @@
 // portfolio. Wire `RobinhoodChainAdapter` to live token contracts / a quotes
 // feed to replace the seeded marks with real data.
 
-import type { Asset, AssetClass } from "./types";
-import { gbmPath, mulberry32, round2 } from "./rng";
+import type { Asset, AssetClass } from "./types.js";
+import { gbmPath, mulberry32, round2 } from "./rng.js";
 
 interface Seed {
   ticker: string;

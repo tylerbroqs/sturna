@@ -56,7 +56,9 @@ src/core/          the agent engine (framework-free TypeScript)
   engine.ts        long-lived state: basket, NAV curve, activity feed, metrics
 src/server/        Hono API that runs the engine live and exposes control endpoints
 src/cli.ts         terminal entry point — runs one full swarm cycle
+src/index.ts       library entry point (typed exports for every agent stage)
 test/              Vitest unit suite (agents, engine, orchestrator)
+examples/          custom-agent pipeline + browser embed
 ```
 
 The core engine has **zero framework dependencies** — it runs identically in Node and in the browser, so you can embed the swarm directly or drive it over the API.
@@ -77,6 +79,26 @@ npm test
 ```
 
 Point any client at the API (see [API](#api)) — the engine is transport-agnostic.
+
+## Use it as a library
+
+Every agent stage is an exported, composable function, and the engine builds
+to native ESM (`npm run build`):
+
+```ts
+import { Engine, runCycle, runSentinel, MANDATES } from "sturna";
+
+const engine = new Engine(1_000_000);
+await engine.runOnce();
+console.log(engine.metrics());
+```
+
+See [`examples/`](examples/) for two complete demonstrations:
+
+- [`examples/custom-agent`](examples/custom-agent/) — write your own agent and
+  splice it into a hand-rolled swarm cycle (`npm run example:agent`)
+- [`examples/browser-embed`](examples/browser-embed/) — the whole swarm running
+  client-side in a plain HTML page (`npm run example:browser`)
 
 ## Going live on Robinhood MCP
 

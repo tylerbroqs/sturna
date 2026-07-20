@@ -4,7 +4,7 @@
 // constraints: max position, min position, sector caps, and an RWA ballast
 // floor so the book is never 100% high-beta pre-IPO.
 
-import type { Asset, AssetScore } from "../types";
+import type { Asset, AssetScore } from "../types.js";
 
 export interface ConstructionConfig {
   targetPositions: number; // how many names to hold

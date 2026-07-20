@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { mulberry32, gaussian, gbmPath, pick } from "../src/core/rng";
+import { mulberry32, gaussian, gbmPath, pick } from "../src/core/rng.js";
 
 describe("mulberry32", () => {
   it("is deterministic for a given seed", () => {

@@ -10,13 +10,13 @@ import type {
   CycleResult,
   ExecutionMode,
   NavPoint,
-} from "./types";
-import { buildUniverse } from "./universe";
-import { MANDATES } from "./agents/analyst";
-import { runCycle, seedBasket, type CycleConfig } from "./orchestrator";
-import { markToMarket, runSteward, appendNavPoint } from "./agents/steward";
-import { RobinhoodAdapter } from "./mcp/robinhoodAdapter";
-import { mulberry32, gaussian } from "./rng";
+} from "./types.js";
+import { buildUniverse } from "./universe.js";
+import { MANDATES } from "./agents/analyst.js";
+import { runCycle, seedBasket, type CycleConfig } from "./orchestrator.js";
+import { markToMarket, runSteward, appendNavPoint } from "./agents/steward.js";
+import { RobinhoodAdapter } from "./mcp/robinhoodAdapter.js";
+import { mulberry32, gaussian } from "./rng.js";
 
 // Browser-safe env read: `process` is undefined in the client bundle, where the
 // engine runs entirely in-page (paper mode) with no MCP token.

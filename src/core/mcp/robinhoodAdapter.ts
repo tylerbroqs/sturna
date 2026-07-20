@@ -20,8 +20,8 @@
 // The paper path is a faithful stand-in so the whole swarm runs end-to-end
 // today; flipping to live is a config change, not a rewrite.
 
-import type { ExecutionMode, Fill, Order } from "../types";
-import { mulberry32 } from "../rng";
+import type { ExecutionMode, Fill, Order } from "../types.js";
+import { mulberry32 } from "../rng.js";
 
 export const ROBINHOOD_TRADING_MCP = "https://agent.robinhood.com/mcp/trading";
 export const ROBINHOOD_BANKING_MCP = "https://agent.robinhood.com/mcp/banking";

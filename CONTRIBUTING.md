@@ -24,7 +24,14 @@ Useful commands:
 | `npm run test:watch` | Run the tests in watch mode while developing |
 | `npm run cycle` | Run one full swarm cycle in the terminal — the fastest smoke test |
 | `npm run server` | Start the Hono API with hot reload on :8787 |
-| `npm run typecheck` | Typecheck the engine + server |
+| `npm run typecheck` | Typecheck the engine, server, tests, and examples |
+| `npm run build` | Build the library to native ESM + declarations in `dist/` |
+| `npm run example:agent` | Run the custom-agent pipeline example |
+| `npm run example:browser` | Bundle the browser embed example |
+
+Releases are documented in [RELEASING.md](RELEASING.md). Note the changelog:
+user-visible changes should add a line under `Unreleased` in
+[CHANGELOG.md](CHANGELOG.md).
 
 ## Making changes
 

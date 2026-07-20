@@ -1,5 +1,5 @@
 // Quick end-to-end smoke test of the swarm from the terminal:  npm run cycle
-import { Engine } from "./core/engine";
+import { Engine } from "./core/engine.js";
 
 const engine = new Engine(1_000_000);
 console.log("\n=== Sturna swarm — running 3 cycles ===\n");

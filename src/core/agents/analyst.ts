@@ -6,8 +6,8 @@
 // narration layer could enrich `rationale`, but the numbers — and therefore
 // the portfolio — never depend on it.
 
-import type { Asset, AssetScore } from "../types";
-import { priceReturn } from "../universe";
+import type { Asset, AssetScore } from "../types.js";
+import { priceReturn } from "../universe.js";
 
 export interface Mandate {
   name: string;

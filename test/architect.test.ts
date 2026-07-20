@@ -1,8 +1,8 @@
 import { describe, it, expect } from "vitest";
-import { runArchitect, DEFAULT_CONSTRUCTION } from "../src/core/agents/architect";
-import { runAnalyst, MANDATES } from "../src/core/agents/analyst";
-import { runScout } from "../src/core/agents/scout";
-import { buildUniverse } from "../src/core/universe";
+import { runArchitect, DEFAULT_CONSTRUCTION } from "../src/core/agents/architect.js";
+import { runAnalyst, MANDATES } from "../src/core/agents/analyst.js";
+import { runScout } from "../src/core/agents/scout.js";
+import { buildUniverse } from "../src/core/universe.js";
 
 const universe = buildUniverse();
 const eligible = runScout(universe).eligible;

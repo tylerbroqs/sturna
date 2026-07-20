@@ -14,14 +14,14 @@ import type {
   Basket,
   CycleResult,
   ExecutionMode,
-} from "./types";
-import { runScout, DEFAULT_SCOUT, type ScoutConfig } from "./agents/scout";
-import { runAnalyst, MANDATES, type Mandate } from "./agents/analyst";
-import { runArchitect, DEFAULT_CONSTRUCTION, type ConstructionConfig } from "./agents/architect";
-import { runSentinel, DEFAULT_LIMITS, type RiskLimits } from "./agents/sentinel";
-import { runExecutor, DEFAULT_EXEC } from "./agents/executor";
-import { runSteward } from "./agents/steward";
-import { RobinhoodAdapter } from "./mcp/robinhoodAdapter";
+} from "./types.js";
+import { runScout, DEFAULT_SCOUT, type ScoutConfig } from "./agents/scout.js";
+import { runAnalyst, MANDATES, type Mandate } from "./agents/analyst.js";
+import { runArchitect, DEFAULT_CONSTRUCTION, type ConstructionConfig } from "./agents/architect.js";
+import { runSentinel, DEFAULT_LIMITS, type RiskLimits } from "./agents/sentinel.js";
+import { runExecutor, DEFAULT_EXEC } from "./agents/executor.js";
+import { runSteward } from "./agents/steward.js";
+import { RobinhoodAdapter } from "./mcp/robinhoodAdapter.js";
 
 let cycleSeq = 0;
 let eventSeq = 0;

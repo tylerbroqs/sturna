@@ -1,9 +1,9 @@
 import { describe, it, expect } from "vitest";
-import { runExecutor, DEFAULT_EXEC } from "../src/core/agents/executor";
-import { RobinhoodAdapter } from "../src/core/mcp/robinhoodAdapter";
-import { seedBasket } from "../src/core/orchestrator";
-import { buildUniverse } from "../src/core/universe";
-import type { Basket } from "../src/core/types";
+import { runExecutor, DEFAULT_EXEC } from "../src/core/agents/executor.js";
+import { RobinhoodAdapter } from "../src/core/mcp/robinhoodAdapter.js";
+import { seedBasket } from "../src/core/orchestrator.js";
+import { buildUniverse } from "../src/core/universe.js";
+import type { Basket } from "../src/core/types.js";
 
 const universe = buildUniverse();
 const adapter = new RobinhoodAdapter({ mode: "paper" });

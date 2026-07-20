@@ -1,5 +1,6 @@
 node_modules/
 dist/
+examples/browser-embed/app.js
 .env
 .env.local
 *.log

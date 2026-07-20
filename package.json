@@ -1,10 +1,29 @@
 {
   "name": "sturna",
   "version": "0.1.0",
-  "private": true,
   "type": "module",
   "description": "Sturna — the autonomous private-markets desk. An AI agent swarm that curates tokenized private/RWA baskets on Robinhood Chain.",
   "license": "MIT",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "LICENSE",
+    "README.md",
+    "CHANGELOG.md"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/tylerbroqs/sturna.git"
@@ -30,7 +49,10 @@
     "cycle": "tsx src/cli.ts",
     "typecheck": "tsc --noEmit",
     "test": "vitest run",
-    "test:watch": "vitest"
+    "test:watch": "vitest",
+    "build": "tsc -p tsconfig.build.json",
+    "example:agent": "tsx examples/custom-agent/main.ts",
+    "example:browser": "esbuild examples/browser-embed/main.ts --bundle --format=iife --outfile=examples/browser-embed/app.js"
   },
   "dependencies": {
     "@hono/node-server": "^1.13.7",
@@ -38,6 +60,7 @@
   },
   "devDependencies": {
     "@types/node": "^22.10.2",
+    "esbuild": "^0.28.1",
     "tsx": "^4.19.2",
     "typescript": "^5.7.2",
     "vitest": "^4.1.10"

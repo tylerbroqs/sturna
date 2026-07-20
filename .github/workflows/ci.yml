@@ -21,3 +21,7 @@ jobs:
         run: npm test
       - name: Run one full swarm cycle (paper mode)
         run: npm run cycle
+      - name: Library build (ESM + declarations)
+        run: npm run build
+      - name: Examples smoke
+        run: npm run example:agent && npm run example:browser

@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { Engine, AGENTS } from "../src/core/engine";
+import { Engine, AGENTS } from "../src/core/engine.js";
 
 describe("Engine", () => {
   it("seeds a book at starting capital before any cycle", () => {

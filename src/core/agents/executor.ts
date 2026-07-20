@@ -3,9 +3,9 @@
 // orders to reach target (buys and sells), and routes them through the
 // RobinhoodAdapter. Applies a no-trade band so tiny drifts don't churn fees.
 
-import type { Asset, Basket, BasketPosition, Fill, Order } from "../types";
-import type { TargetWeight } from "./architect";
-import { RobinhoodAdapter } from "../mcp/robinhoodAdapter";
+import type { Asset, Basket, BasketPosition, Fill, Order } from "../types.js";
+import type { TargetWeight } from "./architect.js";
+import { RobinhoodAdapter } from "../mcp/robinhoodAdapter.js";
 
 export interface ExecConfig {
   noTradeBand: number; // ignore weight diffs smaller than this

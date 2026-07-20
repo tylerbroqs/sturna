@@ -1,7 +1,7 @@
 import { describe, it, expect } from "vitest";
-import { runScout, DEFAULT_SCOUT } from "../src/core/agents/scout";
-import { buildUniverse } from "../src/core/universe";
-import type { Asset } from "../src/core/types";
+import { runScout, DEFAULT_SCOUT } from "../src/core/agents/scout.js";
+import { buildUniverse } from "../src/core/universe.js";
+import type { Asset } from "../src/core/types.js";
 
 function assetWith(overrides: Partial<Asset>): Asset {
   const base = buildUniverse()[0]!;

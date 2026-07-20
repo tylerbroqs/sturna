@@ -1,6 +1,6 @@
 import { describe, it, expect } from "vitest";
-import { runAnalyst, MANDATES } from "../src/core/agents/analyst";
-import { buildUniverse } from "../src/core/universe";
+import { runAnalyst, MANDATES } from "../src/core/agents/analyst.js";
+import { buildUniverse } from "../src/core/universe.js";
 
 const universe = buildUniverse();
 

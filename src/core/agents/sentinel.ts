@@ -4,8 +4,8 @@
 // issues a verdict. Sentinel can reject a cycle outright — it is the swarm's
 // circuit breaker before any order reaches the Executor.
 
-import type { Asset, RiskReport } from "../types";
-import type { TargetWeight } from "./architect";
+import type { Asset, RiskReport } from "../types.js";
+import type { TargetWeight } from "./architect.js";
 
 export interface RiskLimits {
   maxConcentration: number;

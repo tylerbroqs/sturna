@@ -3,7 +3,7 @@
 // weights, marks positions to the latest on-chain price, and decides whether a
 // rebalance is warranted. It's the agent that keeps the swarm honest over time.
 
-import type { Asset, Basket, NavPoint } from "../types";
+import type { Asset, Basket, NavPoint } from "../types.js";
 
 export interface DriftReport {
   maxDrift: number; // largest abs(current - target)

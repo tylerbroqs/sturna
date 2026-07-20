@@ -1,7 +1,7 @@
 import { describe, it, expect } from "vitest";
-import { runCycle, seedBasket } from "../src/core/orchestrator";
-import { buildUniverse } from "../src/core/universe";
-import type { AgentName } from "../src/core/types";
+import { runCycle, seedBasket } from "../src/core/orchestrator.js";
+import { buildUniverse } from "../src/core/universe.js";
+import type { AgentName } from "../src/core/types.js";
 
 const universe = buildUniverse();
 

@@ -1,9 +1,9 @@
 import { describe, it, expect } from "vitest";
-import { runSentinel, DEFAULT_LIMITS } from "../src/core/agents/sentinel";
-import { runArchitect } from "../src/core/agents/architect";
-import { runAnalyst, MANDATES } from "../src/core/agents/analyst";
-import { runScout } from "../src/core/agents/scout";
-import { buildUniverse } from "../src/core/universe";
+import { runSentinel, DEFAULT_LIMITS } from "../src/core/agents/sentinel.js";
+import { runArchitect } from "../src/core/agents/architect.js";
+import { runAnalyst, MANDATES } from "../src/core/agents/analyst.js";
+import { runScout } from "../src/core/agents/scout.js";
+import { buildUniverse } from "../src/core/universe.js";
 
 const universe = buildUniverse();
 const eligible = runScout(universe).eligible;
