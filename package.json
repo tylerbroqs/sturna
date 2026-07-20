@@ -47,6 +47,7 @@
     "server": "tsx watch src/server/index.ts",
     "start": "tsx src/server/index.ts",
     "cycle": "tsx src/cli.ts",
+    "backtest": "tsx src/backtest.ts",
     "typecheck": "tsc --noEmit",
     "test": "vitest run",
     "test:watch": "vitest",

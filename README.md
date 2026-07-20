@@ -80,6 +80,36 @@ npm test
 
 Point any client at the API (see [API](#api)) — the engine is transport-agnostic.
 
+## Backtesting
+
+Run the full swarm over a year of simulated history — 52 weekly rebalances,
+marked to market daily — and compare every mandate:
+
+```bash
+npm run backtest
+```
+
+```
+=== Comparison ===
+Mandate                      Return    Alpha  Sharpe    MaxDD  Turnover
+AI Frontier Growth           +6.63%   -8.62%    0.46   -11.9%     14.6%
+Balanced Private Markets    +12.89%   -2.35%    0.97    -8.9%     15.3%
+Real-World Income           +18.46%   +3.21%    1.65    -6.5%     10.8%
+```
+
+The benchmark is an equal-weight buy-and-hold of the whole universe on the
+same price paths. Runs are seeded and fully reproducible — same seed, same
+numbers. Options:
+
+```bash
+npm run backtest -- --mandate income-rwa    # a single mandate
+npm run backtest -- --cycles 104 --steps 5  # two simulated years
+npm run backtest -- --seed 7                # a different world
+```
+
+Programmatic use: `import { runBacktest } from "sturna"` returns the full
+`BacktestResult` including the daily NAV curve.
+
 ## Use it as a library
 
 Every agent stage is an exported, composable function, and the engine builds

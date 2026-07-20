@@ -23,6 +23,7 @@ Useful commands:
 | `npm test` | Run the Vitest unit suite (agents, engine, orchestrator) |
 | `npm run test:watch` | Run the tests in watch mode while developing |
 | `npm run cycle` | Run one full swarm cycle in the terminal — the fastest smoke test |
+| `npm run backtest` | Backtest all mandates over simulated history (seeded, reproducible) |
 | `npm run server` | Start the Hono API with hot reload on :8787 |
 | `npm run typecheck` | Typecheck the engine, server, tests, and examples |
 | `npm run build` | Build the library to native ESM + declarations in `dist/` |

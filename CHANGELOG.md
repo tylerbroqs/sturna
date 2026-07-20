@@ -7,6 +7,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+- Backtest mode: `npm run backtest` runs the full swarm over seeded,
+  reproducible simulated history and reports return, alpha versus an
+  equal-weight benchmark, Sharpe, max drawdown, turnover, fees, and Sentinel
+  halts per mandate. Exposed programmatically as `runBacktest` in the library.
+
 ## [0.1.0] - 2026-07-20
 
 ### Added

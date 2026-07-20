@@ -4,6 +4,7 @@
 
 export { Engine, AGENTS, type AgentMeta } from "./core/engine.js";
 export { runCycle, seedBasket, type CycleConfig } from "./core/orchestrator.js";
+export { runBacktest, type BacktestConfig, type BacktestResult } from "./core/backtest.js";
 
 export { runScout, DEFAULT_SCOUT, type ScoutConfig, type ScoutResult } from "./core/agents/scout.js";
 export { runAnalyst, MANDATES, type Mandate } from "./core/agents/analyst.js";

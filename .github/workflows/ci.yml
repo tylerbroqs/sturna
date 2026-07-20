@@ -21,6 +21,8 @@ jobs:
         run: npm test
       - name: Run one full swarm cycle (paper mode)
         run: npm run cycle
+      - name: Backtest smoke (short, deterministic)
+        run: npm run backtest -- --cycles 6 --steps 2
       - name: Library build (ESM + declarations)
         run: npm run build
       - name: Examples smoke
